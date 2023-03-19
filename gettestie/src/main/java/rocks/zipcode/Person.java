@@ -1,5 +1,7 @@
-package gettestie.src.main.java.rocks.zipcode;
+package rocks.zipcode;
 
+
+import java.util.Comparator;
 
 public class Person {
     private String name;
@@ -62,5 +64,16 @@ public class Person {
     public String toString() // redefined from "Object"
     {
         return "Name: " + name + "\n" + "Year of birth: " + yearOfBirth + "\n";
+    }
+
+
+    public int compareTo(Person hi) {
+        if(this.name.charAt(0) > hi.name.charAt(0)) {
+            return -1;
+        }
+        else if(this.name.charAt(0) < hi.name.charAt(0)) {
+            return 1;
+        }
+        return 0;
     }
 }
